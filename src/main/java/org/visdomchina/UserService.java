@@ -10,7 +10,7 @@ public class UserService {
     Jdbi jdbi = Jdbi.create(Config.DB, "sa","");
     UserDao ud = new UserDao();
 
-    List<UserModel> listUsers() {
+    List<UserModel> listUsers() throws Exception{
         List<UserModel> a = ud.list(jdbi);
         return a;
     }
